@@ -1,0 +1,46 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffe6f0; /* Fondo rosado suave */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h1 {
+    
+    color: #ff66b2; /* Título rosado fuerte */
+    font-size: 2.5rem;
+}
+
+a, button {
+    background-color: #ff99cc; /* Botones rosados */
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px 0;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+a:hover, button:hover {
+    background-color: #ff66b2;
+}
+
+/* Contenedor principal */
+.container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+}

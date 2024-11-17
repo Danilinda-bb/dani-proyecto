@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Cursos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='visual.css') }}">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Aprende con amor</div>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('home') }}">Inicio</a></li>
+                <li><a href="{{ url_for('buscar_cursos') }}">Buscar Cursos</a></li>
+                <li><a href="#">Sobre Nosotros</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="search-banner">
+        <h1>Encuentra el curso perfecto para ti</h1>
+        <form action="{{ url_for('buscar_cursos') }}" method="GET" class="search-form">
+            <input type="text" name="query" placeholder="Busca un curso..." class="search-bar">
+            <button type="submit" class="search-btn">Buscar</button>
+        </form>
+    </section>
+
+    <section class="featured-courses">
+        <h2>Cursos Encontrados</h2>
+        <div class="course-grid">
+            <div class="course-card">
+                <div class="course-image">
+                    <img src="{{ url_for('static', filename='images/finanzas.jpg') }}" alt="Curso de Finanzas">
+                </div>
+                <div class="course-info">
+                    <h3>Curso de Finanzas Personales</h3>
+                    <p>Aprende a gestionar tu dinero de manera efectiva y planificar tu futuro financiero.</p>
+                    <button class="enroll-btn">Ver Más</button>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-image">
+                    <img src="{{ url_for('static', filename='images/fotografia.jpg') }}" alt="Curso de Fotografía">
+                </div>
+                <div class="course-info">
+                    <h3>Curso de Fotografía Digital</h3>
+                    <p>Captura imágenes impresionantes con técnicas avanzadas de fotografía.</p>
+                    <button class="enroll-btn">Ver Más</button>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-image">
+                    <img src="{{ url_for('static', filename='images/python.jpg') }}" alt="Curso de Programación">
+                </div>
+                <div class="course-info">
+                    <h3>Curso de Programación en Python</h3>
+                    <p>Inicia tu carrera en programación con uno de los lenguajes más populares.</p>
+                    <button class="enroll-btn">Ver Más</button>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-image">
+                    <img src="{{ url_for('static', filename='images/marketing.jpg') }}" alt="Curso de Marketing Digital">
+                </div>
+                <div class="course-info">
+                    <h3>Curso de Marketing Digital</h3>
+                    <p>Aprende estrategias efectivas para promocionar negocios en línea.</p>
+                    <button class="enroll-btn">Ver Más</button>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-image">
+                    <img src="{{ url_for('static', filename='images/cocina.jpg') }}" alt="Curso de Cocina">
+                </div>
+                <div class="course-info">
+                    <h3>Curso de Cocina Gourmet</h3>
+                    <p>Descubre recetas y técnicas para convertirte en un chef en casa.</p>
+                    <button class="enroll-btn">Ver Más</button>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-image">
+                    <img src="{{ url_for('static', filename='images/yoga.jpg') }}" alt="Curso de Yoga">
+                </div>
+                <div class="course-info">
+                    <h3>Curso de Yoga y Meditación</h3>
+                    <p>Encuentra la paz y el equilibrio con prácticas guiadas de yoga y meditación.</p>
+                    <button class="enroll-btn">Ver Más</button>
+                </div>
+            <div class="course-card">
+                <div class="course-image">
+                        <img src="{{ url_for('static', filename='images/yoga.jpg') }}" alt="Curso de Yoga">
+                 </div>
+                <div class="course-info">
+                    <h3>Curso de Yoga y Meditación</h3>
+                    <p>Encuentra la paz y el equilibrio con prácticas guiadas de yoga y meditación.</p>
+                    <button class="enroll-btn">Ver Más</button>
+                 </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

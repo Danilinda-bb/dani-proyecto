@@ -1,0 +1,21 @@
+<section class="search-results">
+    {% if resultados %}
+        <h2>Resultados para "{{ query }}"</h2>
+        <div class="course-grid">
+            {% for curso in resultados %}
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="{{ url_for('static', filename=curso['imagen']) }}" alt="{{ curso['nombre'] }}">
+                    </div>
+                    <div class="course-info">
+                        <h3>{{ curso['nombre'] }}</h3>
+                        <button class="enroll-btn">Ver Más</button>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <h2>Lo siento, el curso no se encuentra en la página.</h2>
+        <p>Puedes crear tu propio curso <a href="#">aquí</a>.</p>
+    {% endif %}
+</section>
